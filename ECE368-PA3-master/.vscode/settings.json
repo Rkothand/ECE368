@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "stdbool.h": "c",
+        "stdio.h": "c",
+        "fileconv.h": "c",
+        "bitset": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}

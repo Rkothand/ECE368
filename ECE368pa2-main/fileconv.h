@@ -1,0 +1,1 @@
+int readOpsFromFile(char *fileName,int  **key,int **opr);

@@ -1,0 +1,76 @@
+==46918== Memcheck, a memory error detector
+==46918== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==46918== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==46918== Command: ./pa3 inputs/examples/7_7.b outputs/7_7.t outputs/7_7.f outputs/7_7.p
+==46918== Parent PID: 46814
+==46918== 
+--46918-- 
+--46918-- Valgrind options:
+--46918--    --tool=memcheck
+--46918--    --log-file=memcheck.txt
+--46918--    --leak-check=full
+--46918--    --verbose
+--46918-- Contents of /proc/version:
+--46918--   Linux version 3.10.0-1160.42.2.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ) #1 SMP Tue Sep 7 14:49:57 UTC 2021
+--46918-- 
+--46918-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3-ssse3-avx-f16c-rdrand
+--46918-- Page sizes: currently 4096, max supported 4096
+--46918-- Valgrind library directory: /usr/libexec/valgrind
+--46918-- Reading syms from /home/shay/a/rkothand/Desktop/ECE368/PA3/pa3
+--46918-- Reading syms from /usr/lib64/ld-2.17.so
+--46918--   Considering /usr/lib/debug/.build-id/62/c449974331341bb08dcce3859560a22af1e172.debug ..
+--46918--   .. build-id is valid
+--46918-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+--46918--    object doesn't have a symbol table
+--46918--    object doesn't have a dynamic symbol table
+--46918-- Scheduler: using generic scheduler lock implementation.
+--46918-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==46918== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-46918-by-rkothand-on-ecegrid-thin4.ecn.purdue.edu
+==46918== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-46918-by-rkothand-on-ecegrid-thin4.ecn.purdue.edu
+==46918== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-46918-by-rkothand-on-ecegrid-thin4.ecn.purdue.edu
+==46918== 
+==46918== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==46918== don't want to do, unless you know exactly what you're doing,
+==46918== or are doing some strange experiment):
+==46918==   /usr/libexec/valgrind/../../bin/vgdb --pid=46918 ...command...
+==46918== 
+==46918== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==46918==   /path/to/gdb ./pa3
+==46918== and then give GDB the following command
+==46918==   target remote | /usr/libexec/valgrind/../../bin/vgdb --pid=46918
+==46918== --pid is optional if only one valgrind process is running
+==46918== 
+--46918-- REDIR: 0x4019e40 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c7ed5 (???)
+--46918-- REDIR: 0x4019c10 (ld-linux-x86-64.so.2:index) redirected to 0x580c7eef (???)
+--46918-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--46918-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+==46918== WARNING: new redirection conflicts with existing -- ignoring it
+--46918--     old: 0x04019e40 (strlen              ) R-> (0000.0) 0x580c7ed5 ???
+--46918--     new: 0x04019e40 (strlen              ) R-> (2007.0) 0x04c2d1b0 strlen
+--46918-- REDIR: 0x4019dc0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2e300 (strcmp)
+--46918-- REDIR: 0x401aa80 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c31f90 (mempcpy)
+--46918-- Reading syms from /usr/lib64/libc-2.17.so
+--46918--   Considering /usr/lib/debug/.build-id/a3/17b42b15368adcae21c11107691a03ec91059d.debug ..
+--46918--   .. build-id is valid
+--46918-- REDIR: 0x4ec71c0 (libc.so.6:strcasecmp) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--46918-- REDIR: 0x4ec3f40 (libc.so.6:strnlen) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--46918-- REDIR: 0x4ec9490 (libc.so.6:strncasecmp) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--46918-- REDIR: 0x4ec69a0 (libc.so.6:memset) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--46918-- REDIR: 0x4ec6950 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--46918-- REDIR: 0x4ec5930 (libc.so.6:__GI_strrchr) redirected to 0x4c2cb70 (__GI_strrchr)
+--46918-- REDIR: 0x4ebc740 (libc.so.6:malloc) redirected to 0x4c29eec (malloc)
+--46918-- REDIR: 0x4edc9b0 (libc.so.6:__GI_strstr) redirected to 0x4c32220 (__strstr_sse2)
+--46918-- REDIR: 0x4ebcb60 (libc.so.6:free) redirected to 0x4c2afe6 (free)
+--46918-- REDIR: 0x4ecbbd0 (libc.so.6:__GI_memcpy) redirected to 0x4c2efb0 (__GI_memcpy)
+--46918-- REDIR: 0x4ecd450 (libc.so.6:strchrnul) redirected to 0x4c31ab0 (strchrnul)
+--46918-- REDIR: 0x4ec6b70 (libc.so.6:__GI_mempcpy) redirected to 0x4c31cc0 (__GI_mempcpy)
+--46918-- REDIR: 0x4ec3850 (libc.so.6:strcpy) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--46918-- REDIR: 0x4ed1770 (libc.so.6:__strcpy_sse2_unaligned) redirected to 0x4c2d1d0 (strcpy)
+==46918== 
+==46918== HEAP SUMMARY:
+==46918==     in use at exit: 0 bytes in 0 blocks
+==46918==   total heap usage: 171 allocs, 171 frees, 6,980 bytes allocated
+==46918== 
+==46918== All heap blocks were freed -- no leaks are possible
+==46918== 
+==46918== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

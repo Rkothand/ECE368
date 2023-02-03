@@ -22,6 +22,8 @@ long *createLongArry()
 int main(int argc, char **argv)
 {
 
+    
+/*
     long *a = createLongArry();
 
     int w = Array_Save_To_File((char*)"./output/o1.txx", a, 10);
@@ -31,4 +33,5 @@ int main(int argc, char **argv)
     Array_Shellsort(a,count,&cc);
     // printf(" wrote %d to file %s", w, "output/out1");
     return 0;
+*/
 }

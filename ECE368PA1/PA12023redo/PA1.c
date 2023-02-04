@@ -8,16 +8,16 @@
 #include <stdint.h>
 #include <unistd.h>
 
-long *createLongArry()
-{
-    long *arr = malloc(sizeof(long) * 10);
-    int i = 0;
-    for (i = 0; i < 10; i++)
-    {
-        arr[i] = (long)i;
-    }
-    return arr;
-}
+// long *createLongArry()
+// {
+//     long *arr = malloc(sizeof(long) * 10);
+//     int i = 0;
+//     for (i = 0; i < 10; i++)
+//     {
+//         arr[i] = (long)i;
+//     }
+//     return arr;
+// }
 
 int main(int argc, char **argv)
 {

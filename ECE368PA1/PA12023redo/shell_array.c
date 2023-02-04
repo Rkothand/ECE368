@@ -7,7 +7,71 @@
 #include <stdint.h>
 #include <unistd.h>
 
+long Array_Load_From_File(char* filename, int *size){
+    FILE *fptr;
+    fptr = fopen(filename, "rb");
+    if (fptr == NULL)
+    {
+        *size = 0;
+        return NULL;
+    }
+    else
+    {
+        int numLong = 0;
+        long value;
+        while (fread(&value, sizeof(long), 1, fptr))        
+        {
+            numLong++;
+        }
+        if (numLong == 0)
+        {
+            *size = 0;
+            return NULL;
+        }
 
+        *size = numLong;
+        long *arr = malloc(sizeof(long) * numLong);
+        fseek(fptr, 0, SEEK_SET);
+        int ind = 0;
+        while (ind < numLong)
+        {
+            while (fread(&arr[ind], sizeof(long), 1, fptr))
+            {
+            ind++;    
+            }
+            
+        }
+        fclose(fptr);
+        return arr;
+    }
+}
+
+
+void Array_Shellsort(long *array, int size, long *n comp){
+    int i, j, k, increment;
+    long temp;
+    *ncomp = 0;
+    for (increment = size / 2; increment > 0; increment /= 2)
+    {
+        for (i = increment; i < size; i++)
+        {
+            for (j = i - increment; j >= 0; j -= increment)
+            {
+                (*ncomp)++;
+                if (array[j + increment] >= array[j])
+                    break;
+                else
+                {
+                    temp = array[j];
+                    array[j] = array[j + increment];
+                    array[j + increment] = temp;
+                }
+            }
+        }
+    }
+}
+
+/*
 long *Array_Load_From_File(char *filename, int *size)
 {
 
@@ -120,3 +184,4 @@ for(outer=0;outer<gap;outer++){
     
 */
 }
+*/

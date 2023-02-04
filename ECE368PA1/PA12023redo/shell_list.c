@@ -6,6 +6,9 @@
 #include <string.h>
 #include <stdint.h>
 #include <unistd.h>
+/*
+
+
 Node *List_Load_From_File(char *filename)
 {
 
@@ -72,3 +75,4 @@ Node *List_Shellsort(Node *list, long *n_comp)
 {
     return NULL;
 }
+*/

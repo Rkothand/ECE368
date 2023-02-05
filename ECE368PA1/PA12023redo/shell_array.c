@@ -42,11 +42,15 @@ long Array_Load_From_File(char* filename, int *size){
             
         }
         fclose(fptr);
+
+        for (int i = 0; i < numLong; i++) {
+            printf("%ld\n", arr[i]);
+        }
         return arr;
     }
 }
 
-
+/*
 void Array_Shellsort(long *array, int size, long *n comp){
     int i, j, k, increment;
     long temp;
@@ -70,6 +74,8 @@ void Array_Shellsort(long *array, int size, long *n comp){
         }
     }
 }
+*/
+
 
 /*
 long *Array_Load_From_File(char *filename, int *size)

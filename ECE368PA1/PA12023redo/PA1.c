@@ -23,10 +23,8 @@ int main(int argc, char **argv)
 {
     int count = 0;
     long *a = Array_Load_From_File("input/1K.b", &count);
-    long cc;
-    Array_Shellsort(a, count, &cc);
-    printf(" wrote %d to file %s", count, "output/out1");
-    return 0;
+
+}
     
 /*
     long *a = createLongArry();

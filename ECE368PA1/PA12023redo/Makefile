@@ -39,7 +39,7 @@ PA1: PA1.c
 	gcc PA1.c -o PA1
 
 run: PA1
-	./PA1 inputs/15k.b 
+	./PA1 inputs/100k.b 
 
 
 # # test1: PA1

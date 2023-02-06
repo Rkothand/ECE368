@@ -19,12 +19,35 @@
 //     return arr;
 // }
 
-int main(int argc, char **argv)
-{
-    int count = 0;
-    long *a = Array_Load_From_File("input/1K.b", &count);
+#include <stdio.h>
+#include <stdlib.h>
 
+
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Usage: %s <binary_file>\n", argv[0]);
+        return 1;
+    }
+    char *filename = argv[1];
+    int size;
+    long *arr = Array_Load_From_File(filename, &size);
+    if (arr == NULL) {
+        printf("Error: Failed to load array from file\n");
+        return 1;
+    }
+    printf("Loaded array of size %d\n", size);
+    free(arr);
+    return 0;
 }
+
+
+// int main(int argc, char **argv)
+// {
+//     int count = 0;
+//     long *a = Array_Load_From_File("", &count);
+
+// }
     
 /*
     long *a = createLongArry();
@@ -36,5 +59,5 @@ int main(int argc, char **argv)
     Array_Shellsort(a,count,&cc);
     // printf(" wrote %d to file %s", w, "output/out1");
     return 0;
-*/
-}
+
+}*/

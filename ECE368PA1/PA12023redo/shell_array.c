@@ -7,7 +7,7 @@
 #include <stdint.h>
 #include <unistd.h>
 
-long Array_Load_From_File(char* filename, int *size){
+long *Array_Load_From_File(char *filename, int *size){
     FILE *fptr;
     fptr = fopen(filename, "rb");
     if (fptr == NULL)
@@ -179,7 +179,7 @@ void Array_Shellsort(long *array, int size, long *n_comp){
         }
     }
 
-/*
+
     int outer=0;
     int inner=0;
 for(outer=0;outer<gap;outer++){
@@ -188,6 +188,4 @@ for(outer=0;outer<gap;outer++){
             if(cmp(array[outer],array[outer+inner])
         }
     
-*/
-}
 */

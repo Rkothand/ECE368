@@ -43,13 +43,30 @@ long *Array_Load_From_File(char *filename, int *size){
         }
         fclose(fptr);
 
-        for (int i = 0; i < numLong; i++) {
-            printf("%ld\n", arr[i]);
-        }
+        // for (int i = 0; i < numLong; i++) {
+        //     printf("%ld\n", arr[i]);
+        // }
+
         return arr;
     }
 }
 
+
+void Array_Shellsort(long *array, int size, long *n_comp)
+{
+    long gap, i, j;
+    long temp;
+    for (gap = *n_comp/2; gap > 0; gap /= 2)
+    {
+        for (i = gap; i < size; i++)
+        {
+            temp = array[i];
+            for (j = i; j >= gap && array[j - gap] > temp; j -= gap)
+                array[j] = array[j - gap];
+            array[j] = temp;
+        }
+    }
+}
 /*
 void Array_Shellsort(long *array, int size, long *n comp){
     int i, j, k, increment;

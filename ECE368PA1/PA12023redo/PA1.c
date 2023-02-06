@@ -37,6 +37,9 @@ int main(int argc, char *argv[]) {
         return 1;
     }
     printf("Loaded array of size %d\n", size);
+    
+
+
     free(arr);
     return 0;
 }

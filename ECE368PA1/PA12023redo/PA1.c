@@ -37,8 +37,10 @@ int main(int argc, char *argv[]) {
         return 1;
     }
     printf("Loaded array of size %d\n", size);
-    
 
+
+    long* num_comps;
+    Array_Shellsort(arr,size, num_comps);
 
     free(arr);
     return 0;
